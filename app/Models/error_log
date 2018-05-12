@@ -1,0 +1,2 @@
+[05-Dec-2017 02:37:18 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/rupahali/public_html/app/Models/Product.php on line 8
+[05-Dec-2017 04:08:50 UTC] PHP Fatal error:  Class 'Illuminate\Database\Eloquent\Model' not found in /home/rupahali/public_html/app/Models/Product.php on line 8
