@@ -13,7 +13,7 @@ Installation
 1.command line in shell or gitbash: git clone    https://github.com/Aponshaha/Laravel_eCommerce.git
 2.edit .env file with database
 3.composer update
-4.run server :php artisan server
+4.run server :php artisan serve
 
 
 For vue.js 
