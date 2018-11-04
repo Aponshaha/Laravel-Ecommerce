@@ -63,15 +63,16 @@ class ProductController extends Controller
          'product_name'=>'required',         
 		]);
 	
-
-			
         $product_model = new Product();        
         $product_model->product_name = $request->product_name;  
         $product_model->product_price = $request->product_price ? $request->product_price : 0;
-		$product_model->product_long_description = $request->product_long_description;		
+		    $product_model->product_description = $request->product_long_description;		
 		
-        $product_model->product_sku = $request->product_sku;  
-        $product_model->category_row_id = $request->category_row_id;   
+        $product_model->product_sku = $request->product_sku;
+        $product_model->product_height=$request->product_height; 
+        $product_model->product_weight=$request->product_weight;
+        $product_model->product_width=$request->product_width; 
+        //$product_model->category_row_id = $request->category_row_id;   
         $product_model->is_featured = $request->is_featured ? 1 : 0;
         $product_model->is_latest = $request->is_latest ? 1 : 0;
         

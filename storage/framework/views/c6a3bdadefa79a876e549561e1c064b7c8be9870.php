@@ -35,31 +35,13 @@
                </button>
             </form>
 
-            <div style="padding-top:10px">  <?php echo e($data['single_info']->product_long_description); ?></div>
+            <div style="padding-top:10px">  <?php echo e($data['single_info']->product_description); ?></div>
           </div>
       </div>
   </div>
 
-<!-- Related Products -->
-  <div class="row">
-    <div class="col-sm-12 text-center bold-class font-big padding-bottom-big">Related Products below</div>
-  </div>
-  <div class="row">   
-    <?php if($data['related_products'] && count($data['related_products'])): ?>
-      <?php $__currentLoopData = $data['related_products']; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-      <div class="col-sm-4">
-        <div class="panel panel-primary">
-          <div class="panel-heading"><?php echo e($product->product_name); ?></div>
-          <div class="panel-body">            
-              <img src="<?php echo e(asset('/')); ?>uploads/products/<?php echo e($product->product_image); ?>"  alt="product" style="max-width:325px;max-height: 120px">            
-            </div>
-          <div class="panel-footer">Price: <?php echo e($product->product_price); ?> </div>
-        </div>
-      </div>
-      <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-    <?php endif; ?>
-  </div>
-  <!-- Related Products -->
+
+
   
 </div>
 <?php $__env->stopSection(); ?>

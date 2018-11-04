@@ -50,12 +50,14 @@ class HomeController extends Controller
 	
 	function productDetails($id)
 	{
-		$data['rating']= round(DB::table('product_ratings')->where('product_id','=',$id)->avg('rating'));
-		$data['ratings']=DB::table('product_ratings')->get();
+		//$data['rating']= round(DB::table('product_ratings')->where('product_id','=',$id)->avg('rating'));
+		//$data['ratings']=DB::table('product_ratings')->get();
+		//$data['related_products']=DB::table('products')->where('category_row_id', '=', $data['single_info']->category_row_id)->get();
+		
 		$data['products'] =  DB::table('products')->where('is_featured', '=', 0)->orderBy('product_row_id', 'desc')->take(6)->get();	
 		$data['single_info'] = DB::table('products')->where('product_row_id', '=', $id)->first();	
 		//dd($data['single_info']);
-		$data['related_products']=DB::table('products')->where('category_row_id', '=', $data['single_info']->category_row_id)->get();
+		
 		return view('product_details', ['data'=>$data]);	
 		
 	}

@@ -3,7 +3,8 @@
 <div class="container">   
   <!- Featured Products -->
   <div class="row">
-    <div class="col-sm-12 text-center bold-class font-big padding-bottom-big">Featured Products</div>
+    <div class="col-sm-12 text-center bold-class font-big padding-bottom-big">Featured Products
+    </div>
   </div>
   <div class="row">
     @if($data['featured_products'] && count($data['featured_products']))
